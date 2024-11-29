@@ -7,7 +7,7 @@ var isPalindrome = function (x) {
 
   while (x > 0) {
     const rem = x % 10;
-    x = Math.trunc(x / 10);
+    x = Math.floor(x / 10);
     reverseNum = reverseNum * 10 + rem;
   }
 
