@@ -1,0 +1,25 @@
+{
+  "name": "leetcode-solutions",
+  "version": "1.0.0",
+  "description": "LeetCode solutions in TypeScript",
+  "scripts": {
+    "start:remove-duplicates": "ts-node easy/remove-duplicates.ts",
+    "start:merge-lists": "ts-node easy/merge_two_sorted_list.ts",
+    "start:two-sum": "ts-node easy/two_sum.ts",
+    "start:palindrome": "ts-node easy/palindrome.ts",
+    "start:roman": "ts-node easy/roman-to-integer.ts",
+    "test:remove-duplicates": "ts-node easy/remove-duplicates.ts",
+    "test:merge-lists": "ts-node easy/merge_two_sorted_list.ts",
+    "test:two-sum": "ts-node easy/two_sum.ts",
+    "test:palindrome": "ts-node easy/palindrome.ts",
+    "test:roman": "ts-node easy/roman-to-integer.ts",
+    "test:parentheses": "ts-node easy/valid-parentheses.ts",
+    "test:prefix": "ts-node easy/fine-longest-common-prefix.ts",
+    "test:all": "npm run test:remove-duplicates && npm run test:merge-lists && npm run test:two-sum && npm run test:palindrome && npm run test:roman && npm run test:parentheses && npm run test:prefix"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3",
+    "@types/node": "^20.11.0"
+  }
+}

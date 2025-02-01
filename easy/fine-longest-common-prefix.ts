@@ -21,3 +21,49 @@ function longestCommonPrefix(strs: string[]): string {
   }
   return commonPrefix;
 }
+
+// Test cases
+function runPrefixTests(): void {
+  const testCases = [
+    {
+      input: ["flower", "flow", "flight"],
+      expected: "fl",
+    },
+    {
+      input: ["dog", "racecar", "car"],
+      expected: "",
+    },
+    {
+      input: ["interspecies", "interstellar", "interstate"],
+      expected: "inters",
+    },
+    {
+      input: ["throne", "throne"],
+      expected: "throne",
+    },
+    {
+      input: [""],
+      expected: "",
+    },
+    {
+      input: ["a"],
+      expected: "a",
+    },
+    {
+      input: ["", "b"],
+      expected: "",
+    },
+  ];
+
+  testCases.forEach((test, index) => {
+    const result = longestCommonPrefix(test.input);
+    console.log(`Test Case ${index + 1}:`);
+    console.log(`Input: [${test.input.map((s) => `"${s}"`).join(", ")}]`);
+    console.log(`Expected: "${test.expected}"`);
+    console.log(`Output: "${result}"`);
+    console.log(`Result: ${result === test.expected ? "PASS" : "FAIL"}`);
+    console.log("---");
+  });
+}
+
+runPrefixTests();

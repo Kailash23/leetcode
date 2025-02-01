@@ -31,3 +31,48 @@ function mergeTwoLists(
 
   return dummyHead.next;
 }
+
+// Test cases
+function runMergeListsTests(): void {
+  const testCases = [
+    {
+      list1: new ListNode(1, new ListNode(2, new ListNode(4))),
+      list2: new ListNode(1, new ListNode(3, new ListNode(4))),
+      expected: [1, 1, 2, 3, 4, 4],
+    },
+    {
+      list1: null,
+      list2: null,
+      expected: [],
+    },
+    {
+      list1: null,
+      list2: new ListNode(0),
+      expected: [0],
+    },
+  ];
+
+  testCases.forEach((test, index) => {
+    const result = mergeTwoLists(test.list1, test.list2);
+    const resultArray: number[] = [];
+    let current = result;
+    while (current !== null) {
+      resultArray.push(current.val);
+      current = current.next;
+    }
+
+    console.log(`Test Case ${index + 1}:`);
+    console.log(`Expected: [${test.expected.join(", ")}]`);
+    console.log(`Output: [${resultArray.join(", ")}]`);
+    console.log(
+      `Result: ${
+        JSON.stringify(resultArray) === JSON.stringify(test.expected)
+          ? "PASS"
+          : "FAIL"
+      }`
+    );
+    console.log("---");
+  });
+}
+
+runMergeListsTests();
