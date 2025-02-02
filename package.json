@@ -15,7 +15,8 @@
     "test:roman": "ts-node easy/roman-to-integer.ts",
     "test:parentheses": "ts-node easy/valid-parentheses.ts",
     "test:prefix": "ts-node easy/fine-longest-common-prefix.ts",
-    "test:all": "npm run test:remove-duplicates && npm run test:merge-lists && npm run test:two-sum && npm run test:palindrome && npm run test:roman && npm run test:parentheses && npm run test:prefix"
+    "test:remove-element-in-place": "ts-node easy/remove-element-in-place.ts",
+    "test:all": "npm run test:remove-duplicates && npm run test:merge-lists && npm run test:two-sum && npm run test:palindrome && npm run test:roman && npm run test:parentheses && npm run test:prefix && npm run test:remove-element-in-place"
   },
   "devDependencies": {
     "ts-node": "^10.9.2",
