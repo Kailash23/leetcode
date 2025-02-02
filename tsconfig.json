@@ -1,18 +1,14 @@
 {
   "compilerOptions": {
-    "target": "es2020",
+    "target": "es6",
     "module": "commonjs",
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "outDir": "./dist",
-    "rootDir": "."
+    "rootDir": "./easy"
   },
-  "include": [
-    "easy/**/*"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+  "include": ["easy/**/*.ts", "easy/__tests__/**/*.ts"],
+  "exclude": ["node_modules"]
 } 

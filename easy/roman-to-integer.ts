@@ -1,8 +1,8 @@
-interface RomanNumberMap {
+export interface RomanNumberMap {
   [key: string]: number;
 }
 
-function romanToInt(str: string): number {
+export function romanToInt(str: string): number {
   const numberToRomanMap: RomanNumberMap = {
     I: 1,
     IV: 4,
@@ -34,28 +34,3 @@ function romanToInt(str: string): number {
 
   return number;
 }
-
-// Test cases
-function runRomanTests(): void {
-  const testCases = [
-    { input: "III", expected: 3 },
-    { input: "LVIII", expected: 58 },
-    { input: "MCMXCIV", expected: 1994 },
-    { input: "IX", expected: 9 },
-    { input: "XL", expected: 40 },
-    { input: "IV", expected: 4 },
-    { input: "CM", expected: 900 },
-  ];
-
-  testCases.forEach((test, index) => {
-    const result = romanToInt(test.input);
-    console.log(`Test Case ${index + 1}:`);
-    console.log(`Input: "${test.input}"`);
-    console.log(`Expected: ${test.expected}`);
-    console.log(`Output: ${result}`);
-    console.log(`Result: ${result === test.expected ? "PASS" : "FAIL"}`);
-    console.log("---");
-  });
-}
-
-runRomanTests();
