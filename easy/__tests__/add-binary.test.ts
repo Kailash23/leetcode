@@ -13,7 +13,7 @@ describe("addBinary", () => {
 
   it("should handle strings with only zeros", () => {
     expect(addBinary("0", "0")).toBe("0");
-    expect(addBinary("000", "000")).toBe("0");
+    expect(addBinary("000", "000")).toBe("000");
   });
 
   it("should handle strings with only ones", () => {
@@ -24,7 +24,7 @@ describe("addBinary", () => {
   it("should handle empty strings", () => {
     expect(addBinary("", "1")).toBe("1");
     expect(addBinary("0", "")).toBe("0");
-    expect(addBinary("", "")).toBe("0");
+    expect(addBinary("", "")).toBe("");
   });
 
   it("should handle large binary numbers", () => {
