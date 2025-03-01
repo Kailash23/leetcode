@@ -18,10 +18,18 @@ export function createExampleTree(): TreeNode<number> {
   node2.addChild(new TreeNode<number>(6));
 
   // Print with arrow notation
-  console.log("Tree structure with arrows:");
+  console.log("Tree structure:");
   printTree(root);
 
   return root;
 }
 
 createExampleTree();
+
+// Tree structure:
+// 1
+//   2
+//     4
+//     5
+//   3
+//     6

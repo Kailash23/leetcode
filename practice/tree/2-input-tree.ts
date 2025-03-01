@@ -28,6 +28,7 @@ async function takeInput(): Promise<TreeNode<number>> {
 async function main() {
   const root = await takeInput();
 
+  console.log("\nTree output:");
   printTree(root);
 
   closeReadLine();
@@ -38,3 +39,15 @@ main().catch((error) => {
   console.error("An error occurred:", error);
   closeReadLine();
 });
+
+// Enter data: 3
+// Enter num of children of 3: 2
+// Enter data: 1
+// Enter num of children of 1: 0
+// Enter data: 1
+// Enter num of children of 1: 0
+
+// Tree output:
+// 3
+//   1
+//   1
