@@ -1,5 +1,9 @@
 // https://leetcode.com/problems/length-of-last-word/
 
+// Time Complexity: O(n), where n is the length of the input string.
+// We iterate through the string once, checking each character.
+// Space Complexity: O(1), as we are using a constant amount of extra space.
+
 export function lengthOfLastWord(inputString: string): number {
   let lastWordLength = 0;
   let spaceCount = 0;
@@ -21,3 +25,11 @@ export function lengthOfLastWord(inputString: string): number {
   }
   return lastWordLength;
 }
+
+// Example 1:
+// Input: s = "Hello World"
+// Output: 5
+
+// Example 2:
+// Input: s = "   fly me   to   the moon  "
+// Output: 4

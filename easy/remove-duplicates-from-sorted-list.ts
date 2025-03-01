@@ -27,3 +27,14 @@ export function deleteDuplicates(head: ListNode | null): ListNode | null {
 
   return head;
 }
+
+// Time Complexity: O(n) where n is the number of nodes in the linked list
+// We traverse each node at most once
+
+// Space Complexity: O(1)
+// We only use a single pointer variable regardless of input size
+
+// Example:
+// Input: head = [1,1,2,3,3]
+// Output: [1,2,3]
+// Explanation: Duplicates are removed, keeping only one occurrence of each value

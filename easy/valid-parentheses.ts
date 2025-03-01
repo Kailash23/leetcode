@@ -19,3 +19,14 @@ export function isValid(str: string): boolean {
 
   return arr.length === 0;
 }
+
+// Time Complexity: O(n) where n is the length of the input string
+// We traverse the string once, with O(1) stack operations
+
+// Space Complexity: O(n)
+// In the worst case (e.g., all opening brackets), we store all characters in the stack
+
+// Example:
+// Input: str = "()[]{}"
+// Output: true
+// Explanation: All brackets are properly closed in the correct order

@@ -1,5 +1,9 @@
 // https://leetcode.com/problems/add-binary/
 
+// Time Complexity: O(max(n, m)), where n and m are the lengths of strings a and b respectively.
+// This is because we iterate through each string once, from the end to the beginning.
+// Space Complexity: O(max(n, m)), as the result string can be at most one character longer than the longer input string.
+
 export function addBinary(a: string, b: string): string {
   let i = a.length - 1;
   let j = b.length - 1;
@@ -44,3 +48,11 @@ export function addBinary(a: string, b: string): string {
 
   return isCarry ? "1" + result : result;
 }
+
+// Example 1:
+// Input: a = "11", b = "1"
+// Output: "100"
+
+// Example 2:
+// Input: a = "1010", b = "1011"
+// Output: "10101"

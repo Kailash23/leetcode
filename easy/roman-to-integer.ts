@@ -34,3 +34,14 @@ export function romanToInt(str: string): number {
 
   return number;
 }
+
+// Time Complexity: O(n) where n is the length of the input string
+// We traverse the string once, potentially skipping characters when we find special pairs
+
+// Space Complexity: O(1)
+// The hash map has a fixed size regardless of input
+
+// Example:
+// Input: str = "MCMXCIV"
+// Output: 1994
+// Explanation: M = 1000, CM = 900, XC = 90, IV = 4

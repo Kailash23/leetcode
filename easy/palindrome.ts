@@ -1,6 +1,10 @@
 // https://leetcode.com/problems/palindrome-number/description/
 
-// Mine
+// Time Complexity: O(n), where n is the number of digits in the number.
+// We iterate through the number once to reverse it.
+
+// Space Complexity: O(1), as we are using a constant amount of extra space for the reverseNum variable.
+
 export function isPalindrome(x: number): boolean {
   let originalNum = x;
   let reverseNum = 0;
@@ -30,3 +34,11 @@ export function isPalindrome2(x: number): boolean {
   // Check if the original number is equal to the reversed half
   return x === reverseNum || x === Math.floor(reverseNum / 10);
 }
+
+// Example 1:
+// Input: x = 123
+// Output: false
+
+// Example 2:
+// Input: x = 121
+// Output: true
