@@ -1,6 +1,6 @@
 import { TreeNode } from "./core/tree-node";
 import { closeReadLine } from "../utils/common";
-import { takeTreeInput } from "../utils/tree-utils";
+import { printTree, takeTreeInput } from "../utils/tree-utils";
 
 /**
  * Recursively deletes a tree
@@ -36,6 +36,8 @@ async function main() {
   try {
     console.log("Building a tree:");
     const root = await takeTreeInput();
+
+    printTree(root);
 
     console.log("\nDeleting the tree...");
     deleteTree(root);
