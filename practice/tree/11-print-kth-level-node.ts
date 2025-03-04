@@ -5,9 +5,20 @@ import { askQuestion } from "../utils/common";
 
 /**
  * Prints all nodes at level k in the tree
- * Root node is considered as level 0
+ * Root is at level 0, its children at level 1, and so on
+ *
+ * Time Complexity: O(n) - Where n is the number of nodes in the tree.
+ * In the worst case, the function might need to visit all nodes in the tree to reach level k.
+ * However, if k is small compared to the height of the tree, the function will only visit
+ * a subset of nodes. But for complexity analysis, we consider the worst case.
+ *
+ * Space Complexity: O(h) - Where h is the height of the tree.
+ * This is due to the recursion stack, which in the worst case (a skewed tree) could be O(n),
+ * but in a balanced tree would be O(log n). The space complexity is determined by the
+ * maximum depth of the recursion, which corresponds to the height of the tree.
+ *
  * @param root The root node of the tree
- * @param k The level to print
+ * @param k The level at which to print nodes (0-indexed)
  */
 export function printAtLevelK(root: TreeNode<number> | null, k: number): void {
   if (root === null) {

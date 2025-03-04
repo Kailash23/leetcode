@@ -4,6 +4,16 @@ import { askQuestion, closeReadLine } from "../utils/common";
 
 /**
  * Takes input for a tree in hierarchical order using recursion
+ *
+ * Time Complexity: O(n) - Where n is the number of nodes in the tree. The function makes exactly one
+ * recursive call for each child node, and each call involves constant-time operations (parsing input,
+ * creating a node, and adding a child).
+ *
+ * Space Complexity: O(h) - Where h is the height of the tree. This accounts for:
+ *   - O(h) space for the recursion stack, where h is the maximum depth of recursion
+ *   - O(n) space for storing the tree nodes, but this is considered output space
+ * The limiting factor is the recursion stack depth, which depends on the tree height.
+ *
  * @returns A Promise that resolves with the root node of the tree
  */
 async function takeInput(): Promise<TreeNode<number>> {

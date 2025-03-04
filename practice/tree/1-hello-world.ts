@@ -3,6 +3,12 @@ import { printTree } from "../utils/tree-utils";
 
 /**
  * Create an example tree for testing
+ *
+ * Time Complexity: O(1) - This function creates a fixed number of nodes (7) and performs a fixed number
+ * of operations to connect them. The printTree function's complexity is not included in this analysis
+ * as it's a separate utility function.
+ *
+ * Space Complexity: O(1) - The function creates a fixed number of TreeNode objects (7) regardless of input.
  */
 export function createExampleTree(): TreeNode<number> {
   const root = new TreeNode<number>(1); // root

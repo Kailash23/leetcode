@@ -5,8 +5,19 @@ import { takeTreeInput, printTreeLevelWise } from "../utils/tree-utils";
 /**
  * Counts the number of leaf nodes in a tree
  * A leaf node is a node with no children
+ *
+ * Time Complexity: O(n) - Where n is the number of nodes in the tree.
+ * The function visits each node exactly once through recursion.
+ * At each node, it performs O(1) operations (checking if it's a leaf) plus iterating through its children.
+ * The total number of operations is proportional to the number of nodes.
+ *
+ * Space Complexity: O(h) - Where h is the height of the tree.
+ * This is due to the recursion stack, which in the worst case (a skewed tree) could be O(n),
+ * but in a balanced tree would be O(log n). The space complexity is determined by the
+ * maximum depth of the recursion, which corresponds to the height of the tree.
+ *
  * @param root The root node of the tree
- * @returns The number of leaf nodes
+ * @returns The number of leaf nodes in the tree
  */
 export function numLeafNodes(root: TreeNode<number> | null): number {
   if (root === null) {

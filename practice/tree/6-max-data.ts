@@ -1,9 +1,20 @@
 import { TreeNode } from "./core/tree-node";
 import { closeReadLine } from "../utils/common";
-import { takeTreeInput } from "../utils/tree-utils";
+import { takeTreeInput, printTree } from "../utils/tree-utils";
 
 /**
  * Finds the node with the maximum data value in the tree
+ *
+ * Time Complexity: O(n) - Where n is the number of nodes in the tree.
+ * The function uses level-order traversal to visit each node exactly once.
+ * At each node, it performs O(1) operations (comparisons) plus iterating through its children.
+ * Across the entire tree, we process each node once, resulting in O(n) overall.
+ *
+ * Space Complexity: O(w) - Where w is the maximum width of the tree (maximum number of nodes at any level).
+ * The queue used for level-order traversal will contain at most w nodes at any point in time.
+ * In the worst case of a completely balanced tree, the maximum width could be n/2 nodes (at the last level),
+ * which simplifies to O(n).
+ *
  * @param root The root node of the tree
  * @returns The node with the maximum data value, or null if the tree is empty
  */
