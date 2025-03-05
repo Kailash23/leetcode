@@ -11,10 +11,10 @@ import { takeTreeInput, printTreeLevelWise } from "../utils/tree-utils";
  * At each node, it performs O(1) operations (checking if it's a leaf) plus iterating through its children.
  * The total number of operations is proportional to the number of nodes.
  *
- * Space Complexity: O(h) - Where h is the height of the tree.
- * This is due to the recursion stack, which in the worst case (a skewed tree) could be O(n),
- * but in a balanced tree would be O(log n). The space complexity is determined by the
- * maximum depth of the recursion, which corresponds to the height of the tree.
+ * Space Complexity: O(w) - Where w is the maximum width of the tree (maximum number of nodes at any level).
+ * The queue used for level-order traversal will contain at most w nodes at any point in time.
+ * In the worst case of a completely balanced tree, the maximum width could be n/2 nodes (at the last level),
+ * which simplifies to O(n).
  *
  * @param root The root node of the tree
  * @returns The number of leaf nodes in the tree
