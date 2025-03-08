@@ -16,52 +16,11 @@
  */
 
 import { BinaryTreeNode } from "./core/binary-tree-node";
-import { takeBinaryTreeInputLevelWise } from "../utils/binary-tree-utils";
+import {
+  printBinaryTreeLevelWise,
+  takeBinaryTreeInputLevelWise,
+} from "../utils/binary-tree-utils";
 import { closeReadLine } from "../utils/common";
-
-/**
- * Prints the binary tree in level-wise order with the specified format
- *
- * Time Complexity: O(n) - Where n is the number of nodes in the tree.
- * Each node is processed exactly once in the level-order traversal.
- *
- * Space Complexity: O(w) - Where w is the maximum width of the tree.
- * The queue will contain at most w nodes at any point in time.
- * In a balanced binary tree, the maximum width is n/2 in the worst case (at the last level),
- * which simplifies to O(n).
- */
-function printLevelWise(root: BinaryTreeNode<number> | null): void {
-  if (root === null) {
-    return;
-  }
-
-  const pendingNodes: BinaryTreeNode<number>[] = [];
-  pendingNodes.push(root);
-
-  while (pendingNodes.length > 0) {
-    const front = pendingNodes.shift()!;
-
-    process.stdout.write(`${front.data}:`);
-
-    // Process left child
-    if (front.left !== null) {
-      process.stdout.write(`L:${front.left.data}`);
-      pendingNodes.push(front.left);
-    } else {
-      process.stdout.write("L:-1");
-    }
-
-    // Process right child
-    if (front.right !== null) {
-      process.stdout.write(`,R:${front.right.data}`);
-      pendingNodes.push(front.right);
-    } else {
-      process.stdout.write(",R:-1");
-    }
-
-    console.log(); // New line
-  }
-}
 
 /**
  * Main function to run the binary tree operations
@@ -70,7 +29,7 @@ async function main() {
   try {
     const root = await takeBinaryTreeInputLevelWise();
     console.log();
-    printLevelWise(root);
+    printBinaryTreeLevelWise(root);
 
     closeReadLine();
   } catch (error) {
